@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
+
+body {
+  @apply font-arimo;
+}
+
+@theme {
+  --color-orange: oklch(0.56 0.17 35.77);
+  --color-cream: oklch(0.95 0.03 83.45);
+  --font-arimo: "Arimo";
+}
+
+@layer components {
+  .nav-link-bg {
+    @apply before:absolute before:bottom-0 before:left-0 before:z-[-1] before:w-0 before:h-full before:transition-all before:bg-orange;
+  }
+}
