@@ -14,10 +14,9 @@ const NavBar = () => {
     ]
 
     return (
-        <nav className="fixed top-0 left-0 right-0 backdrop-blur-md shadow-md shadow-orange/40">
+        <nav className="fixed top-0 left-0 right-0 backdrop-blur-2xl shadow-md shadow-orange/40">
             {/* NavBar content */}
             <div className="flex w-full items-center justify-between p-2">
-
                 {/* Logo */}
                 <div className="w-13">
                     <a href="#home">
