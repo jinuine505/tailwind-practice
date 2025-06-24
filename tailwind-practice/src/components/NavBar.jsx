@@ -41,7 +41,7 @@ const NavBar = () => {
                     </div>
 
                     {/* Mobile menu bars */}
-                    <button className={`relative nav-link-bg sm:hidden cursor-pointer ${isMenuOpen ? "text-cream before:w-full" : "hover:text-cream hover:before:w-full"} p-[5px] px-2.5`} onClick={() => { setIsMenuOpen(!isMenuOpen) }}>
+                    <button className={`relative nav-link-bg-green sm:hidden cursor-pointer ${isMenuOpen ? "text-cream before:w-full" : "hover:text-cream"} p-[5px] px-2.5`} onClick={() => { setIsMenuOpen(!isMenuOpen) }}>
                         {isMenuOpen ? <FontAwesomeIcon className="px-[0.9px]" icon={faX} /> : <FontAwesomeIcon icon={faBars} />}
                     </button>
                 </div>
@@ -50,7 +50,7 @@ const NavBar = () => {
             {/* Mobile navigation links */}
             {isMenuOpen && <div className="sm:hidden items-center gap-5">
                 {navLinks.map((link, index) => (
-                    <a className={`relative block nav-link-bg duration-200 p-1 ${location.hash === link.href ? "text-cream before:w-full" : "hover:text-cream hover:before:w-full"}`} href={link.href} key={index}>
+                    <a className={`relative block nav-link-bg-green duration-200 p-1 ${location.hash === link.href ? "text-cream before:w-full" : "hover:text-cream"}`} href={link.href} key={index}>
                         {link.label}
                     </a>
                 ))}
