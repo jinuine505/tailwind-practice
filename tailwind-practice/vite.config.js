@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     allowedHosts: [
-      'reported-fairly-schedules-routines.trycloudflare.com'
+      'coal-r-adrian-sister.trycloudflare.com'
     ]
   }
 })

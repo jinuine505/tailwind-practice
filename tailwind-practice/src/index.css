@@ -9,6 +9,16 @@ body {
   --color-orange: oklch(0.56 0.17 35.77);
   --color-cream: oklch(0.95 0.03 83.45);
   --font-arimo: "Arimo";
+  --animate-marquee: marquee 20s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 @layer components {
