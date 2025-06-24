@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
 
-body {
-  @apply font-arimo;
-}
-
 @theme {
   --color-orange: oklch(0.56 0.17 35.77);
   --color-cream: oklch(0.95 0.03 83.45);
+  --color-green: oklch(0.53 0.13 154.74);
+  --color-gray: oklch(0.34 0 0);
   --font-arimo: "Arimo";
   --animate-marquee: marquee 20s linear infinite;
 
@@ -15,14 +13,22 @@ body {
     0% {
       transform: translateX(0%);
     }
+
     100% {
       transform: translateX(-100%);
     }
   }
 }
 
+@layer base {
+  body {
+    @apply font-arimo;
+    @apply text-gray;
+  }
+}
+
 @layer components {
-  .nav-link-bg {
-    @apply before:absolute before:bottom-0 before:left-0 before:z-[-1] before:w-0 before:h-full before:transition-all before:bg-orange;
+  .nav-link-bg-green {
+    @apply before:absolute before:bottom-0 before:left-0 before:z-[-1] before:w-0 before:h-full before:transition-all hover:before:w-full before:bg-green;
   }
 }

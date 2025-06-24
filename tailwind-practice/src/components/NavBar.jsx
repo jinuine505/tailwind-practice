@@ -27,7 +27,7 @@ const NavBar = () => {
                 {/* Navigation links */}
                 <div className="hidden sm:flex items-center gap-5">
                     {navLinks.map((link, index) => (
-                        <a className={`relative nav-link-bg duration-200 p-1 ${location.hash === link.href ? "text-cream before:w-full" : "hover:text-cream hover:before:w-full"}`} href={link.href} key={index}>
+                        <a className={`relative nav-link-bg-green duration-200 p-1 ${location.hash === link.href ? "text-cream before:w-full" : "hover:text-cream"}`} href={link.href} key={index}>
                             {link.label}
                         </a>
                     ))}
@@ -37,7 +37,7 @@ const NavBar = () => {
                 <div className="flex items-center gap-2 ">
                     {/* Cart */}
                     <div className="">
-                        <a className="relative nav-link-bg duration-200 p-2 cursor-pointer hover:text-cream hover:before:w-full"><FontAwesomeIcon icon={faCartShopping} /></a>
+                        <a className="relative nav-link-bg-green duration-200 p-2 cursor-pointer hover:text-cream"><FontAwesomeIcon icon={faCartShopping} /></a>
                     </div>
 
                     {/* Mobile menu bars */}
