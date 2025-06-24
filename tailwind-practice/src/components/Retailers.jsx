@@ -18,15 +18,15 @@ const Retailers = () => {
     ];
 
     return (
-        <div className="container mx-auto flex flex-col px-5 pb-5 md:flex-row">
+        <div className="container mx-auto flex flex-col px-5 pb-5">
             {/* Label */}
-            <div className="flex items-center p-1 z-10 w-fit bg-orange text-cream whitespace-nowrap">
+            <div className="flex items-center justify-center p-1 z-10 text-lg sm:text-2xl bg-orange text-cream">
                 Find Us At
             </div>
             {/* Marquee wrapper */}
-            <div className="flex w-full overflow-hidden">
+            <div className="flex w-full overflow-hidden p-2 bg-cream">
                 {/* Retailers */}
-                <div className="animate-marquee flex items-center pl-30 p-1 space-x-30">
+                <div className="animate-marquee flex items-center pl-30 space-x-30">
                     {retailers.map((retailer, index) => (
                         <img src={retailer} alt="retailers logo" key={index} className="max-w-none h-10 transition-all hover:scale-105" />
                     ))}
