@@ -28,13 +28,13 @@ const Retailers = () => {
                 {/* Retailers */}
                 <div className="animate-marquee flex items-center pl-30 space-x-30">
                     {retailers.map((retailer, index) => (
-                        <img src={retailer} alt="retailers logo" key={index} className="max-w-none h-10 transition-all hover:scale-105" />
+                        <img src={retailer} alt="retailers logo" key={index} className="max-w-none h-10 grayscale hover:grayscale-0 transition-all hover:scale-105" />
                     ))}
                 </div>
                 {/* Duplicate logos for smooth srolling */}
                 <div className="animate-marquee flex items-center pl-30 space-x-30">
                     {retailers.map((retailer, index) => (
-                    <img src={retailer} alt="retailers logo" key={`dup-${index}`} className="max-w-none h-10 transition-all hover:scale-105" />
+                    <img src={retailer} alt="retailers logo" key={`dup-${index}`} className="max-w-none h-10 grayscale hover:grayscale-0 transition-all hover:scale-105" />
                 ))}
                 </div>
             </div>
