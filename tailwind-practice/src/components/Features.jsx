@@ -19,13 +19,13 @@ const Features = () => {
     ]
 
     return (
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-5 pb-10">
             {/* Label */}
             <div className="flex items-center justify-center p-1 z-10 text-lg sm:text-2xl font-medium bg-orange text-cream">
                 Why Choose Our Watches
             </div>
             {/* Features container */}
-            <div className="p-5 bg-cream">
+            <div className="p-5 pb-0 bg-cream">
                 {features.map((feature, index) => (
                     <div key={index} className="flex flex-col md:flex-row md:items-stretch pb-5 items-center transition-all hover:scale-101">
                         {/* Feature image */}
