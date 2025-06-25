@@ -18,7 +18,7 @@ const Retailers = () => {
     ];
 
     return (
-        <div className="container mx-auto flex flex-col px-5 pb-5">
+        <div className="container mx-auto flex flex-col px-5 pb-10">
             {/* Label */}
             <div className="flex items-center justify-center p-1 z-10 text-lg sm:text-2xl font-medium bg-orange text-cream">
                 Find Us At
