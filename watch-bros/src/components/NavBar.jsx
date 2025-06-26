@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLocation } from "react-router";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faBars, faX } from '@fortawesome/free-solid-svg-icons';
+import logo from "/watch-bros.png"
 
 const NavBar = () => {
     const location = useLocation();
@@ -20,7 +21,7 @@ const NavBar = () => {
                 {/* Logo */}
                 <div className="w-13">
                     <a href="#home">
-                        <img className="hover:scale-105 transition-transform duration-300 cursor-pointer" src="/watch-bros.png" alt="Watch Bros" />
+                        <img className="hover:scale-105 transition-transform duration-300 cursor-pointer" src={logo} alt="Watch Bros" />
                     </a>
                 </div>
 

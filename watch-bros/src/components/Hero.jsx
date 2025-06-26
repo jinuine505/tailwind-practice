@@ -1,4 +1,5 @@
 import { easeInOut, motion } from "motion/react"
+import watch from "../assets/woodwatch-CFFrmpYPQbM-unsplash.jpg"
 
 const Hero = () => {
     return (
@@ -14,7 +15,7 @@ const Hero = () => {
 
                 {/* Right column */}
                 <div className="w-full overflow-hidden">
-                    <motion.img src="src/assets/woodwatch-CFFrmpYPQbM-unsplash.jpg" alt="Watch" initial={{scale: 1.3}} transition={{duration: 2, ease: easeInOut}} viewport={{once: true}} whileInView={{scale: 1}}/>
+                    <motion.img src={watch} alt="Watch" initial={{scale: 1.3}} transition={{duration: 2, ease: easeInOut}} viewport={{once: true}} whileInView={{scale: 1}}/>
                 </div>
             </div>
 

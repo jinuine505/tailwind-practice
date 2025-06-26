@@ -5,9 +5,5 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  server: {
-    allowedHosts: [
-      'coal-r-adrian-sister.trycloudflare.com'
-    ]
-  }
+  base: '/watch-bros/'
 })
