@@ -1,3 +1,5 @@
+import { easeInOut, motion } from "motion/react"
+
 const Hero = () => {
     return (
         <div>
@@ -5,14 +7,14 @@ const Hero = () => {
             <div className="w-full flex flex-col md:flex-row pt-30 pb-2 mx-auto">
                 {/* Left column */}
                 <div className="w-full flex items-center text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold bg-orange">
-                    <span className="flex p-5 text-cream items-center">
+                    <motion.span className="flex p-5 text-cream items-center" initial={{opacity: 0}} transition={{duration: 2}} viewport={{once: true}} whileInView={{opacity: 1}}>
                         We Make Watches.
-                    </span>
+                    </motion.span>
                 </div>
 
                 {/* Right column */}
-                <div className="w-full">
-                    <img src="src/assets/woodwatch-CFFrmpYPQbM-unsplash.jpg" alt="Watch" />
+                <div className="w-full overflow-hidden">
+                    <motion.img src="src/assets/woodwatch-CFFrmpYPQbM-unsplash.jpg" alt="Watch" initial={{scale: 1.3}} transition={{duration: 2, ease: easeInOut}} viewport={{once: true}} whileInView={{scale: 1}}/>
                 </div>
             </div>
 

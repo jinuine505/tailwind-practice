@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { motion } from "motion/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import jerry from "../assets/pexels-cottonbro-6551763.jpg"
@@ -80,32 +81,34 @@ const Testimonials = () => {
             >
                 {testimonials.map((testimonial, index) => (
                     <SwiperSlide key={index} className="p-5 mb-10 bg-cream">
-                        {/* Testimonial container */}
-                        <div className="flex flex-row gap-5">
-                            {/* Left column */}
-                            <div className="flex flex-col justify-center min-w-fit">
-                                {/* Testimonial photo */}
-                                <div className="flex justify-center">
-                                    <img src={testimonial.photo} alt={testimonial.name} className="w-20 rounded-full hover:scale-105 duration-200" />
+                        <motion.div initial={{ opacity: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} whileInView={{ opacity: 1 }}>
+                            {/* Testimonial container */}
+                            <div className="flex flex-row gap-5">
+
+                                {/* Left column */}
+                                <div className="flex flex-col justify-center min-w-fit">
+                                    {/* Testimonial photo */}
+                                    <div className="flex justify-center">
+                                        <img src={testimonial.photo} alt={testimonial.name} className="w-20 rounded-full hover:scale-105 duration-200" />
+                                    </div>
+                                    {/* Testimonial rating */}
+                                    <div>
+                                        {[...Array(testimonial.rating)].map((_, index) => (
+                                            <span key={index}>
+                                                <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B", }} />
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
-                                {/* Testimonial rating */}
-                                <div>
-                                    {[...Array(testimonial.rating)].map((_, index) => (
-                                        <span key={index}>
-                                            <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B", }} />
-                                        </span>
-                                    ))}
+
+                                {/* Right column */}
+                                <div className="flex flex-col justify-center">
+                                    <h2 className="font-bold italic">{`"${testimonial.header}"`}</h2>
+                                    <p>{testimonial.review}</p>
+                                    <p>{`- ${testimonial.name}`}</p>
                                 </div>
                             </div>
-
-                            {/* Right column */}
-                            <div className="flex flex-col justify-center">
-                                <h2 className="font-bold italic">{`"${testimonial.header}"`}</h2>
-                                <p>{testimonial.review}</p>
-                                <p>{`- ${testimonial.name}`}</p>
-                            </div>
-                        </div>
-
+                        </motion.div>
                     </SwiperSlide>
                 ))}
             </Swiper>
