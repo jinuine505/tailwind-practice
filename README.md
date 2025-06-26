@@ -8,9 +8,17 @@ A mock homepage for the fake watch-making company Watch Bros. The site is non-fu
 * Carousel showing customer testimonials
 * Desktop and mobile viewing
 
+## Tech Stack
+1. [ReactJS](https://reactjs.org/) - Component-based JavaScript library
+2. [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+3. [Vite](https://vite.dev/) - Frontend build tool
+
+This project was bootstrapped using **Vite** and styled using **Tailwind CSS**. All components are built with **ReactJS**.
+
 ## Libraries
-1. Customer testimonial carousel uses [Swiper](https://swiperjs.com/), which is a popular slider library.
-2. The component animations, such as the fade-ins and image zoom, utilize [Motion](https://motion.dev/), an animation library and developer tool suite.
+1. [Swiper](https://swiperjs.com/) - A popular slider library used for the customer testimonial carousel in this project
+2. [Motion](https://motion.dev/) - An animation library and developer tool suite, used for the fade-ins and image zoom in this project
+3. [Font Awesome](https://fontawesome.com/) - An icon library and toolkit for the icons in this project
 
 ## Running Locally
 Prerequisites
